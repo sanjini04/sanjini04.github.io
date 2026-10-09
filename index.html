@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sanjini Bhagwat – Software Developer</title>
+<meta name="description" content="Sanjini Bhagwat, BCA graduate and Python full stack developer from Honnavar, Karnataka.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F4F6FF; --ink:#111A3A; --sea:#2EC4B6; --sun:#FFC94A; --pink:#FF8FB1; --sky:#9DB8FF;
+  --card:#fff; --muted:#46507A;
+  --display:'Bricolage Grotesque',Georgia,serif;
+  --body:'Instrument Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--paper:#0D1330; --ink:#F1F3FF; --card:#18204A; --muted:#B4BCE6}
+  .hero,.panel,.pill,.btn,.role-card,.contact{--edge:#F1F3FF}
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.05rem/1.65 var(--body)}
+.wrap{max-width:66rem;margin:0 auto;padding:0 1.25rem}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.hero,.panel,.pill,.btn,.role-card,.contact{--edge:#111A3A}
+/* hero */
+.hero{background:var(--sea);color:#111A3A;border-bottom:4px solid var(--edge);padding:clamp(2.5rem,7vw,5.5rem) 0}
+.hero .wrap{display:grid;gap:2.5rem;align-items:center}
+@media(min-width:56rem){.hero .wrap{grid-template-columns:1.25fr 1fr}}
+.sticker{display:inline-block;background:var(--pink);border:3px solid var(--edge);border-radius:2rem;padding:.3rem 1rem;font-weight:600;transform:rotate(-3deg);box-shadow:4px 4px 0 var(--edge);margin-bottom:1.25rem}
+.hero h1{font:800 clamp(2.5rem,8vw,5.2rem)/1 var(--display);letter-spacing:-.02em;margin:0 0 1.25rem}
+.hero p.lead{font-size:1.15rem;max-width:32rem;margin:0 0 1.75rem}
+.links{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{display:inline-block;font-weight:600;text-decoration:none;background:#fff;color:#111A3A;border:3px solid var(--edge);border-radius:.75rem;padding:.6rem 1.1rem;box-shadow:4px 4px 0 var(--edge);transition:transform .15s,box-shadow .15s}
+.btn.sun{background:var(--sun)}
+.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--edge)}
+/* role switcher */
+.role-card{background:#fff;color:#111A3A;border:3px solid var(--edge);border-radius:1.25rem;padding:1.25rem;box-shadow:8px 8px 0 var(--edge);transform:rotate(1.5deg)}
+.role-card h2{font:800 1.15rem/1.2 var(--display);margin:0 0 .25rem}
+.role-card .sub{margin:0 0 .9rem;font-size:.95rem;color:#46507A}
+.tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem}
+.tabs button{font:600 .95rem var(--body);background:#fff;color:#111A3A;border:3px solid var(--edge);border-radius:2rem;padding:.35rem .9rem;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--sun)}
+.role-out{min-height:5.5rem;margin:0;font-size:1.02rem}
+/* sections */
+section{padding:clamp(2.5rem,6vw,4.5rem) 0}
+h2.title{font:800 clamp(1.8rem,5vw,2.8rem)/1.1 var(--display);letter-spacing:-.01em;margin:0 0 2rem}
+.panels{display:grid;gap:1.75rem}
+@media(min-width:56rem){.panels{grid-template-columns:1fr 1fr}}
+.panel{background:var(--card);border:3px solid var(--edge);border-radius:1.25rem;padding:1.5rem;box-shadow:8px 8px 0 var(--edge)}
+.panel.a{background:var(--sun);color:#111A3A}
+.panel.b{background:var(--sky);color:#111A3A}
+.panel h3{font:800 1.5rem/1.15 var(--display);margin:0 0 .5rem}
+.stack{display:flex;flex-wrap:wrap;gap:.4rem;margin:0 0 1rem;padding:0;list-style:none}
+.stack li,.pill{background:#fff;color:#111A3A;border:2px solid var(--edge);border-radius:2rem;padding:.1rem .7rem;font-size:.9rem;font-weight:500;margin:0}
+.panel ul.pts{padding-left:1.1rem;margin:0 0 1rem}
+.panel ul.pts li{margin:.35rem 0}
+.panel a.more{font-weight:600}
+.two{display:grid;gap:2.5rem}
+@media(min-width:56rem){.two{grid-template-columns:1fr 1fr}}
+h3.sm{font:800 1.3rem/1.2 var(--display);margin:0 0 .25rem}
+.when{color:var(--muted);margin:0 0 1rem}
+.chips{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:1.25rem}
+.chips .pill{box-shadow:3px 3px 0 var(--edge);font-size:1rem;padding:.25rem .9rem}
+.chips .pill:nth-child(3n+1){background:var(--sea)}
+.chips .pill:nth-child(3n+2){background:var(--pink)}
+.chips .pill:nth-child(3n){background:var(--sun)}
+.group{font-weight:600;margin:0 0 .5rem}
+ul.plain{padding-left:1.1rem;margin:0}
+ul.plain li{margin:.45rem 0}
+.contact{background:var(--ink);color:var(--paper);border:3px solid var(--edge);border-radius:1.5rem;padding:clamp(1.75rem,5vw,3.5rem);box-shadow:8px 8px 0 var(--sun)}
+.contact h2{font:800 clamp(1.8rem,5vw,3rem)/1.1 var(--display);margin:0 0 .75rem}
+.contact a.mail{font:800 clamp(1.2rem,4.5vw,2rem)/1.3 var(--display);word-break:break-word;color:var(--sun)}
+footer{padding:1rem 0 3rem;text-align:center;color:var(--muted);font-size:.9rem}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <span class="sticker">Open to work</span>
+      <h1>Hi, I'm Sanjini. I build web apps from database to browser.</h1>
+      <p class="lead">BCA graduate (2026) from Honnavar, Karnataka, looking for an entry-level Software Developer or Backend Developer role.</p>
+      <div class="links">
+        <a class="btn sun" href="#projects">See my projects</a>
+        <a class="btn" href="Sanjini_Bhagwat_Resume.pdf" download>Download resume</a>
+        <a class="btn" href="https://github.com/sanjini04">GitHub</a>
+        <a class="btn" href="https://linkedin.com/in/sanjini-bhagwat-787517292">LinkedIn</a>
+      </div>
+    </div>
+    <div class="role-card">
+      <h2>Krishi Care, by role</h2>
+      <p class="sub">Tap a role to see what it does in my farmland investment platform.</p>
+      <div class="tabs" role="tablist" aria-label="Krishi Care roles">
+        <button role="tab" aria-selected="true" data-r="farmer">Farmer</button>
+        <button role="tab" aria-selected="false" data-r="investor">Investor</button>
+        <button role="tab" aria-selected="false" data-r="admin">Admin</button>
+      </div>
+      <p class="role-out" id="roleOut" aria-live="polite"></p>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="about">
+  <div class="wrap">
+    <h2 class="title">About me</h2>
+    <p style="max-width:42rem;font-size:1.15rem;margin:0">I recently finished my BCA and love turning an idea into a working app, from the database tables to the screens people use. During my Python Full Stack internship and my own projects, I built role-based systems with login security, image uploads and maps. I'm now looking for my first role as a Software or Backend Developer, where I can keep learning from a team.</p>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <h2 class="title">Projects</h2>
+    <div class="panels">
+      <article class="panel a">
+        <h3>Krishi Care: Agriculture Management System</h3>
+        <ul class="stack"><li>React.js (Vite)</li><li>Node.js</li><li>Express.js</li><li>MySQL</li><li>Multer</li><li>Leaflet</li></ul>
+        <ul class="pts">
+          <li>A farmland investment platform where farmers list proposals and investors buy shares in crop projects.</li>
+          <li>Role-based access for Farmer, Investor and Admin, with JWT authentication, bcrypt hashing and an admin approval workflow.</li>
+          <li>Farmland image uploads and Leaflet map views.</li>
+          <li>An 8-table MySQL schema and 25 REST API endpoints.</li>
+        </ul>
+        <a class="more" href="https://github.com/sanjini04/krishi-care-management-system">View code on GitHub</a>
+      </article>
+      <article class="panel b">
+        <h3>Government Scheme Assistance Portal</h3>
+        <ul class="stack"><li>React.js (Vite)</li><li>Node.js</li><li>Express.js</li><li>MySQL</li><li>Bootstrap 5</li></ul>
+        <ul class="pts">
+          <li>A full-stack portal that helps persons with disabilities find and access government welfare schemes.</li>
+          <li>Three role-based modules (User, Admin, Donor) with permission checks, JWT authentication and bcrypt password hashing.</li>
+          <li>Designed the MySQL schema for user records, scheme listings and donor contributions.</li>
+        </ul>
+        <a class="more" href="https://github.com/sanjini04/govt-scheme-assistance-portal-">View code on GitHub</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap two">
+    <div>
+      <h2 class="title">Experience</h2>
+      <h3 class="sm">Python Full Stack Development Intern</h3>
+      <p class="when">Apponix Technologies, February to May 2026</p>
+      <ul class="plain">
+        <li>Built full-stack web applications with Python, HTML, CSS, JavaScript and MySQL, owning features on both the front end and back end.</li>
+        <li>Connected front-end interfaces to back-end database logic to deliver working end-to-end features.</li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="title">Skills</h2>
+      <p class="group">Languages</p>
+      <div class="chips"><span class="pill">Python</span><span class="pill">JavaScript</span></div>
+      <p class="group">Web</p>
+      <div class="chips"><span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">React.js</span><span class="pill">Node.js</span><span class="pill">Express.js</span><span class="pill">REST APIs</span><span class="pill">Bootstrap 5</span></div>
+      <p class="group">Databases and tools</p>
+      <div class="chips"><span class="pill">MySQL</span><span class="pill">Git</span><span class="pill">GitHub</span><span class="pill">VS Code</span><span class="pill">Postman</span><span class="pill">MS Excel</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="background">
+  <div class="wrap two">
+    <div>
+      <h2 class="title">Education</h2>
+      <h3 class="sm">Bachelor of Computer Applications</h3>
+      <p class="when">Oxford College of Computer Applications, Hubballi. CGPA 8.00 / 10, graduating 2026.</p>
+      <h3 class="sm">Pre-University Course</h3>
+      <p class="when">SDM College, Honnavar. 76%, 2023.</p>
+      <h3 class="sm">SSLC</h3>
+      <p class="when">Pragati Vidyalaya English Medium School, Muroor. 71%, 2021.</p>
+    </div>
+    <div>
+      <h2 class="title">Certifications</h2>
+      <ul class="plain">
+        <li>AWS Cloud Practitioner Essentials, AWS Training &amp; Certification (July 2026)</li>
+        <li>Data Visualisation: Empowering Business with Effective Insights, Tata via Forage (July 2026)</li>
+        <li>Data Analytics Job Simulation, Deloitte via Forage (July 2026)</li>
+        <li>AWS Solutions Architecture Job Simulation, Forage (March 2025)</li>
+        <li>TCS iON NQT (IT), 2026: advanced section score 84.73%</li>
+      </ul>
+      <h3 class="sm" style="margin-top:1.5rem">Languages</h3>
+      <p class="when">Kannada (native), English (professional), Hindi (intermediate)</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact">
+      <h2>Let's work together.</h2>
+      <p>I'm open to entry-level backend and software developer roles.</p>
+      <a class="mail" href="mailto:sanjini945@gmail.com">sanjini945@gmail.com</a>
+      <p style="margin:1rem 0 0"><a class="mail" style="font-size:1.1rem" href="Sanjini_Bhagwat_Resume.pdf" download>Download my resume (PDF)</a></p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>Sanjini Vishwanath Bhagwat, Honnavar, Karnataka</footer>
+
+<script>
+var roles={
+  farmer:"Lists farmland proposals, with images and a spot on the map, for investors to discover.",
+  investor:"Browses approved farmland projects and buys shares in the crops being grown.",
+  admin:"Reviews each farmland proposal and approves it before it goes live."
+};
+var out=document.getElementById('roleOut');
+var tabs=document.querySelectorAll('.tabs button');
+function pick(k){
+  out.textContent=roles[k];
+  tabs.forEach(function(b){b.setAttribute('aria-selected',b.dataset.r===k?'true':'false')});
+}
+tabs.forEach(function(b){b.addEventListener('click',function(){pick(b.dataset.r)})});
+pick('farmer');
+</script>
+</body>
+</html>
